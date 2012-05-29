@@ -9,8 +9,8 @@
 #' @param f A factor column that defines the protein group memberships of the
 #'          peptides. This defaults to the ProteinGroup column in the 
 #'          ngq.peptide data frame.
+#' @return A data frame with all protein-level quantifications
 #'  
-
 ngq.proteins <- function(x, f=x$peptides$ProteinGroup)
 {
     ratioCols <- x$meta$fold.cols
@@ -20,6 +20,7 @@ ngq.proteins <- function(x, f=x$peptides$ProteinGroup)
     proteins.mad <- NULL
     proteins.ratios <- NULL
     proteins.cv <- NULL
+    nPeptides <- tapply(matrix(1, length(f), 1), f, sum)
     for (i in 1:length(logratioCols)) {
         tmp <- peptides[, logratioCols[i]]
         proteins.logratios <- cbind(proteins.logratios, tapply(tmp, f, median))
@@ -29,25 +30,26 @@ ngq.proteins <- function(x, f=x$peptides$ProteinGroup)
         proteins.ratios <- cbind(proteins.ratios, tapply(tmp, f, median))
     }
     ix <- match(levels(as.factor(f)), f)
-    #desc <- peptides$Description[ix]
+    desc <- peptides$Description[ix]
     ipi <- peptides$Protein[ix]
     proteins <- data.frame(
-            f,
+            f[ix],
             ipi,
-    #        desc,
-#            as.numeric(nPeptides),
+            desc,
+            as.numeric(nPeptides),
             proteins.logratios,
             proteins.mad,
             proteins.ratios,
             proteins.cv
     )
-#    rownames(proteins) <- NULL
-#    names(proteins) <- c("GeneName", "AccNumber",# "Description",
-#            "nPeptides",
-#            gsub("ratio", "logratio", ratioNames),
-#            gsub("ratio", "MAD", ratioNames),
-#            ratioNames,
-#            gsub("ratio", "CV", ratioNames))
-    class(proteins) <- "ngq.proteins"
+    rownames(proteins) <- NULL
+    logRatioNames <- names(x$peptides[logratioCols])
+    ratioNames <- names(x$peptides[ratioCols])
+    names(proteins) <- c("GeneName", "AccNumber", "Description",
+            "nPeptides",
+            logRatioNames,
+            gsub("^", "MAD ", logRatioNames),
+            ratioNames,
+            gsub("^", "CV ", ratioNames))
     proteins
 }

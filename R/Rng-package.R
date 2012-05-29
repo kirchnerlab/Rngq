@@ -15,8 +15,8 @@
 #' @aliases Rngq
 #' @docType package
 #' @title Process NGQ peptide-level data
-#' @author Marc Kirchner \email{mail@marc-kirchner.de}
+#' @author Marc Kirchner
 #' @references
 #' \url{http://massquito.net}
 #' @keywords package
-roxygen()
+NULL

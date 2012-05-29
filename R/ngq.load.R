@@ -27,7 +27,7 @@
 #' @param exclude Regular expression that specifies which protein groups to
 #'                exclude. Useful for removing reverse DB hits. Set to NA to
 #'                disable.
-#' @return A data frame of class 'ngq.peptides', with elements
+#' @return A data frame with elements
 #'         \item{peptides}{A data.frame with all peptide data.}
 #'         \item{meta}{Metadata used by other functions in the package.}
 ngq.load <- function(filename, labels, min.quality=0.95, na.rm=FALSE, 
@@ -81,6 +81,5 @@ ngq.load <- function(filename, labels, min.quality=0.95, na.rm=FALSE,
                     fitid.cols = fit.cols
             )
     )
-    class(r) <- "ngq.peptides"
     r
 }

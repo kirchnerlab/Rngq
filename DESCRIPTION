@@ -6,6 +6,11 @@ Date: 2012-05-29
 Author: Marc Kirchner
 Maintainer: Marc Kirchner <mail@marc-kirchner.de>
 Description: Rngq reads the output of the massquito pipeline and generates
-  peptide and protein lists that are usable for biologists.
+    peptide and protein lists that are usable for biologists.
 License: MIT license
 LazyLoad: yes
+Collate:
+    'ngq.load.R'
+    'ngq.peptides.R'
+    'ngq.proteins.R'
+    'Rng-package.R'

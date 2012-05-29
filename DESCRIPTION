@@ -1,10 +1,11 @@
 Package: Rngq
 Type: Package
-Title: What the package does (short line)
+Title: NGQ processing functions
 Version: 1.0
-Date: 2012-04-27
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Date: 2012-05-29
+Author: Marc Kirchner
+Maintainer: Marc Kirchner <mail@marc-kirchner.de>
+Description: Rngq reads the output of the massquito pipeline and generates
+  peptide and protein lists that are usable for biologists.
+License: MIT license
 LazyLoad: yes

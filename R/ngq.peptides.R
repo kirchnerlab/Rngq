@@ -3,12 +3,18 @@
 #' The function takes a raw ngq.peptides data frame and appends the
 #' fold change and logratio (base 2) columns.
 #' 
+#' @export
 #' @param x A raw ngq.peptides data frame.
 #' @param ref The name of the reference label whose value is used as the denominator
 #'            in all fold change and logratio calculation steps. The value
 #'            this parameter must be among x$meta$labels.
 #' @return The ngq.peptides data frame with fold change and logratio columns
-#'         appended. 
+#'         appended.
+#' @examples
+#'     library(Rngq)
+#'     data(xilac_peptides)
+#'     p <- ngq.peptides(xilac_peptides)
+#' 
 ngq.peptides <- function(x, ref=x$meta$labels[1])
 {
     # make sure the refernce is among the labels

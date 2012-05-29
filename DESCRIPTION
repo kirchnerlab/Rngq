@@ -14,3 +14,4 @@ Collate:
     'ngq.peptides.R'
     'ngq.proteins.R'
     'Rng-package.R'
+    'xilac_data.R'

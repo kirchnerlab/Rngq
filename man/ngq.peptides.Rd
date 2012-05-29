@@ -20,4 +20,9 @@
   The function takes a raw ngq.peptides data frame and
   appends the fold change and logratio (base 2) columns.
 }
+\examples{
+library(Rngq)
+    data(xilac_peptides)
+    p <- ngq.peptides(xilac_peptides)
+}
 

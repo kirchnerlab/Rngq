@@ -17,6 +17,7 @@
 #' a later protein-level quantification step, in particular if simplicial
 #' transformations are used to mitigate NA effects.
 #'
+#' @export
 #' @param filename The filename of the file to load.
 #' @param labels The names of the different labels.
 #' @param min.quality The minimum quality across all fits for a series to be

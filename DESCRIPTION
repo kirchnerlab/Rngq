@@ -15,3 +15,4 @@ Collate:
     'ngq.proteins.R'
     'Rng-package.R'
     'xilac_data.R'
+    'ngq.write.xlsx.R'

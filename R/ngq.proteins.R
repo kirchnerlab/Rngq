@@ -4,6 +4,7 @@
 #' quantification and variance information and returns an ngq.protein data
 #' frame.
 #' 
+#' @export
 #' @param x A peptide-quantified ngq.peptide data frame (i.e. processed with
 #'          ngq.peptides().
 #' @param f A factor column that defines the protein group memberships of the

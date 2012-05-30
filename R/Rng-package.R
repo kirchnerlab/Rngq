@@ -6,6 +6,7 @@
 #' Version: \tab 0.1\cr
 #' Date: \tab 2012-04-27\cr
 #' License: \tab MIT\cr
+#' Depends: \tab XLConnect\cr
 #' }
 #'
 #' This package provides a few function to process the peptide-level
@@ -16,7 +17,6 @@
 #' @docType package
 #' @title Process NGQ peptide-level data
 #' @author Marc Kirchner
-#' @references
-#' \url{http://massquito.net}
+#' @references \url{http://massquito.net}
 #' @keywords package
 NULL

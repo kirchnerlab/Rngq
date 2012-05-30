@@ -1,1 +1,4 @@
+export(ngq.load)
 export(ngq.peptides)
+export(ngq.proteins)
+export(ngq.write.xlsx)

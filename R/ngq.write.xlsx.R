@@ -57,7 +57,7 @@ ngq.write.xlsx <- function(filename, peptides=NULL, proteins=NULL)
         regionName <- paste(sheetName, "container", sep="_") 
         createName(wb, name=regionName,
                 formula = paste(sheetName, "$A$1", sep = "!"))
-        writeNamedRegion(wb, data = proteins, name=regionName, header = TRUE)
+        writeNamedRegion(wb, data = proteins$proteins, name=regionName, header = TRUE)
     }
     # TODO: store stats
     #sheetName <- "stats"

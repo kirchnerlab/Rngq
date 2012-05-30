@@ -52,5 +52,18 @@ ngq.proteins <- function(x, f=x$peptides$ProteinGroup)
             gsub("^", "MAD ", logRatioNames),
             ratioNames,
             gsub("^", "CV ", ratioNames))
-    proteins
+    n <- length(logRatioNames) 
+    col.ix <- 4 + matrix(1:(4*n), n, 4)
+    meta <- list(
+            f = f,
+            cols.logratio=col.ix[,1],
+            cols.mad=col.ix[,2],
+            cols.fold=col.ix[,3],
+            cols.cv=col.ix[,4]
+    )
+    p <- list(
+            proteins=proteins,
+            meta=meta
+    )
+    p
 }

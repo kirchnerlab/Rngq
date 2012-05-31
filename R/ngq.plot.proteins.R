@@ -12,6 +12,7 @@
 #' @param median Boolean indicator if the median fold change should be
 #'               marked by a vertical line in the CDF plot. Default is
 #'               \code{FALSE}.
+#' @param annotation.cex Relative size of annotation text 
 #' @param ... Additional graphics parameters that are passed on to 
 #'            \code{plot}/\code{points}.
 #' 
@@ -39,7 +40,7 @@
 #' }
 #' 
 ngq.plot.proteins <- function(proteins, type="cdf", colors=NULL,
-        pch=NA, bty="l", median=FALSE, ...)
+        pch=NA, bty="l", median=FALSE, annotation.cex=NA, ...)
 {
     # check the plot type
     if (type == "cdf") {
@@ -83,7 +84,10 @@ ngq.plot.proteins <- function(proteins, type="cdf", colors=NULL,
             abline(v=0, col=colors[i], lty=3)
             # text
             ix <- ((!(abs(x) < 1)) & p > -log10(0.01))
-            text(x[ix], p[ix], labels=proteins$proteins$GeneName[ix])
+            if (!all(!ix)) {
+                text(x[ix], p[ix], labels=proteins$proteins$ProteinGroup[ix],
+                        cex=annotation.cex, pos=4)
+            }
         }
         abline(v=c(-1,1), col="lightgray", lty=2)
         abline(h=-log10(0.05), col="lightgray", lty=2)

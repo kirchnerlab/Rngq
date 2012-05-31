@@ -51,7 +51,7 @@ ngq.proteins <- function(x, f=x$peptides$ProteinGroup)
     rownames(proteins) <- NULL
     logRatioNames <- names(x$peptides[logratioCols])
     ratioNames <- names(x$peptides[ratioCols])
-    names(proteins) <- c("GeneName", "AccNumber", "Description",
+    names(proteins) <- c("ProteinGroup", "ProteinGroupId", "Description",
             "nPeptides",
             logRatioNames,
             gsub("^", "MAD ", logRatioNames),

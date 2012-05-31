@@ -3,7 +3,8 @@
 \title{Cumulative density plot of protein logratios.}
 \usage{
   ngq.plot.proteins(proteins, type = "cdf", colors = NULL,
-    pch = NA, bty = "l", median = FALSE, ...)
+    pch = NA, bty = "l", median = FALSE,
+    annotation.cex = NA, ...)
 }
 \arguments{
   \item{proteins}{A \code{proteins} data frame.}
@@ -21,6 +22,8 @@
   \item{median}{Boolean indicator if the median fold change
   should be marked by a vertical line in the CDF plot.
   Default is \code{FALSE}.}
+
+  \item{annotation.cex}{Relative size of annotation text}
 
   \item{...}{Additional graphics parameters that are passed
   on to \code{plot}/\code{points}.}

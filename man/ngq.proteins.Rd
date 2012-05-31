@@ -20,4 +20,9 @@
   protein-level quantification and variance information and
   returns an ngq.protein data frame.
 }
+\examples{
+data(xilac_peptides)
+    p <- ngq.peptides(xilac_peptides)
+    q <- ngq.proteins(p)
+}
 

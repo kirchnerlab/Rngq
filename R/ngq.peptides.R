@@ -11,7 +11,6 @@
 #' @return The ngq.peptides data frame with fold change and logratio columns
 #'         appended.
 #' @examples
-#'     library(Rngq)
 #'     data(xilac_peptides)
 #'     p <- ngq.peptides(xilac_peptides)
 #' 

@@ -1,4 +1,6 @@
 export(ngq.load)
 export(ngq.peptides)
+export(ngq.plot.proteins)
 export(ngq.proteins)
+export(ngq.significance)
 export(ngq.write.xlsx)

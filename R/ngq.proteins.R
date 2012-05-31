@@ -11,6 +11,11 @@
 #'          peptides. This defaults to the ProteinGroup column in the 
 #'          ngq.peptide data frame.
 #' @return A data frame with all protein-level quantifications
+#' 
+#' @examples
+#'     data(xilac_peptides)
+#'     p <- ngq.peptides(xilac_peptides)
+#'     q <- ngq.proteins(p)
 #'  
 ngq.proteins <- function(x, f=x$peptides$ProteinGroup)
 {

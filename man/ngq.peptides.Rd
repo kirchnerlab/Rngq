@@ -21,8 +21,7 @@
   appends the fold change and logratio (base 2) columns.
 }
 \examples{
-library(Rngq)
-    data(xilac_peptides)
+data(xilac_peptides)
     p <- ngq.peptides(xilac_peptides)
 }
 

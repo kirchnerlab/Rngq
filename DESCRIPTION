@@ -9,6 +9,8 @@ Description: Rngq reads the output of the massquito pipeline and generates
     peptide and protein lists that are usable for biologists.
 License: GPL-3
 LazyLoad: yes
+Depends:
+    RColorBrewer
 Collate:
     'ngq.load.R'
     'ngq.peptides.R'
@@ -16,3 +18,5 @@ Collate:
     'Rng-package.R'
     'xilac_data.R'
     'ngq.write.xlsx.R'
+    'ngq.plot.proteins.R'
+    'ngq.significance.R'

@@ -10,7 +10,7 @@
 \details{
   \tabular{ll}{ Package: \tab Rngq\cr Type: \tab Package\cr
   Version: \tab 0.1\cr Date: \tab 2012-04-27\cr License:
-  \tab MIT\cr Depends: \tab XLConnect\cr }
+  \tab MIT\cr }
 
   This package provides a few function to process the
   peptide-level quantifications extracted by NGQ.
